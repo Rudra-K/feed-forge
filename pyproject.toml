@@ -1,0 +1,42 @@
+[project]
+name = "feed-forge"
+version = "0.1.0"
+description = "A high-performance, unifying library for data ingestion pipelines from multiple sources."
+authors = [
+    { name = "Rudra Kawade", email = "r.kawade11@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "httpx[http2]>=0.27.0",
+    "pydantic>=2.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "black>=24.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Rudra-K/feed-forge"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+asyncio_mode = "auto"
+
+[tool.black]
+line-length = 88
