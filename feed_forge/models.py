@@ -9,6 +9,7 @@ class Author(BaseModel):
 class FeedItem(BaseModel):
     #required fields
     id: str = Field(..., description="A unique identifier for the item.")
+    source_url: HttpUrl = Field(..., description="The URL of the feed or API endpoint this item came from.")
     url: HttpUrl = Field(..., description="The direct URL to the full content.")
     title: str
 
