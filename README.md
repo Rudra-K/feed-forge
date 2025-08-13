@@ -64,6 +64,54 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 ```
+## Usage
+
+First, fetch a list of items from your desired sources.
+
+```python
+
+import asyncio
+from feed_forge import Forge
+
+SOURCES = ["https://www.theverge.com/rss/index.xml", "https://hnrss.org/frontpage"]
+
+async def get_items():
+    forge = Forge()
+    all_items = await forge.fetch_all(sources=SOURCES)
+    return all_items
+
+items = asyncio.run(get_items())
+```
+Once you have the items list, you can easily work with the standardized data.
+
+
+### Example 1: Find All Articles About "AI"
+
+```python
+
+ai_articles = [
+    item for item in items 
+    if "ai" in item.title.lower()
+]
+
+print("AI Articles Found:")
+for article in ai_articles:
+    print(f"- {article.title}")
+```
+### Example 2: Get the 5 Most Recent Articles
+
+```python
+
+# Filter out items that might not have a publication date.
+dated_items = [item for item in items if item.published_at]
+
+# Sort the items by date.
+dated_items.sort(key=lambda item: item.published_at, reverse=True)
+
+print("\nMost Recent Articles:")
+for article in dated_items[:5]:
+    print(f"- {article.title} (Published: {article.published_at.strftime('%Y-%m-%d')})")
+```
 
 ---
 
