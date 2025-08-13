@@ -1,4 +1,4 @@
-# Feed-Forge
+# FeedUnify
 
 A high-performance, asynchronous Python library designed to unify and simplify data ingestion from multiple sources like RSS feeds and APIs into a single, clean format.
 
@@ -8,7 +8,7 @@ A high-performance, asynchronous Python library designed to unify and simplify d
 
 Developers often need to pull data from various inconsistent sources like RSS feeds, Atom feeds, JSON APIs, and more. Each source has its own data structure and quirks, leading to brittle, custom code for each one.
 
-`Feed-Forge` solves this by providing a single, elegant interface to fetch, parse, and standardize content from any source into a predictable, easy-to-use `FeedItem` object.
+`FeedUnify` solves this by providing a single, elegant interface to fetch, parse, and standardize content from any source into a predictable, easy-to-use `FeedItem` object.
 
 ### Key Features
 
@@ -21,7 +21,7 @@ Developers often need to pull data from various inconsistent sources like RSS fe
 
 ## Installation
 
-Currently, you can install `Feed-Forge` directly from the GitHub repository.
+Currently, you can install `FeedUnify` directly from the GitHub repository.
 
 pip install git+[https://github.com/Rudra-K/feed-forge.git](https://github.com/Rudra-K/feed-forge.git)
 

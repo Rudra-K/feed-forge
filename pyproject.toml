@@ -1,9 +1,9 @@
 [project]
-name = "feed-forge"
+name = "feedunify"
 version = "0.1.0"
 description = "A high-performance, unifying library for data ingestion pipelines from multiple sources."
 authors = [
-    { name = "Rudra Kawade", email = "r.kawade11@gmail.com" },
+    { name = "Rudra Kawade", email = "rudrakawade2004@gmail.com" },
 ]
 readme = "README.md"
 requires-python = ">=3.8"
