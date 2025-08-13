@@ -32,7 +32,7 @@ class Forge:
                 task = asyncio.create_task(connector.fetch())
                 tasks.append(task)
             else:
-                print(f"Error: No suitable connector found for URL: {url}")
+                print(f"Warning: No suitable connector found for URL: {url}")
 
         results_from_all_sources = await asyncio.gather(*tasks, return_exceptions=True)
 
