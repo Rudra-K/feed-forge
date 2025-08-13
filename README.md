@@ -90,7 +90,7 @@ The primary output of `Feed-Forge` is a list of `FeedItem` objects. This object 
 `Feed-Forge` is actively being developed. Future goals include:
 
 * [ ] Adding a connector for common JSON APIs.
-* [ ] Implementing intelligent HTTP caching (ETags, Last-Modified) to be a good internet citizen.
+* [ ] Implementing intelligent HTTP caching (ETags, Last-Modified).
 * [ ] Improving source detection logic.
 * [ ] Exploring support for more complex sources like newsletters.
 
