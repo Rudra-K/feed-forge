@@ -85,7 +85,7 @@ The primary output of `Feed-Forge` is a list of `FeedItem` objects. This object 
 
 ---
 
-## Roadmap
+## Future Plans
 
 `Feed-Forge` is actively being developed. Future goals include:
 
