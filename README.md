@@ -6,7 +6,7 @@ A high-performance, asynchronous Python library designed to unify and simplify d
 
 ## About The Project
 
-Developers often need to pull data from various inconsistent sources—RSS feeds, Atom feeds, JSON APIs, and more. Each source has its own data structure and quirks, leading to brittle, custom code for each one.
+Developers often need to pull data from various inconsistent sources like RSS feeds, Atom feeds, JSON APIs, and more. Each source has its own data structure and quirks, leading to brittle, custom code for each one.
 
 `Feed-Forge` solves this by providing a single, elegant interface to fetch, parse, and standardize content from any source into a predictable, easy-to-use `FeedItem` object.
 
