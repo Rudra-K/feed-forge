@@ -21,10 +21,11 @@ Developers often need to pull data from various inconsistent sources like RSS fe
 
 ## Installation
 
-Currently, you can install `feedunify` directly from the GitHub repository.
+you can install the library with:
 
-pip install git+[https://github.com/Rudra-K/feedunify.git]
-
+```bash
+pip install feedunify
+```
 ---
 
 ## Quickstart
