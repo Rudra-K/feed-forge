@@ -8,7 +8,7 @@ A high-performance, asynchronous Python library designed to unify and simplify d
 
 Developers often need to pull data from various inconsistent sources like RSS feeds, Atom feeds, JSON APIs, and more. Each source has its own data structure and quirks, leading to brittle, custom code for each one.
 
-`FeedUnify` solves this by providing a single, elegant interface to fetch, parse, and standardize content from any source into a predictable, easy-to-use `FeedItem` object.
+`feedunify` solves this by providing a single, elegant interface to fetch, parse, and standardize content from any source into a predictable, easy-to-use `FeedItem` object.
 
 ### Key Features
 
@@ -21,9 +21,9 @@ Developers often need to pull data from various inconsistent sources like RSS fe
 
 ## Installation
 
-Currently, you can install `FeedUnify` directly from the GitHub repository.
+Currently, you can install `feedunify` directly from the GitHub repository.
 
-pip install git+[https://github.com/Rudra-K/feed-forge.git](https://github.com/Rudra-K/feed-forge.git)
+pip install git+[https://github.com/Rudra-K/feedunify.git]
 
 ---
 
@@ -32,15 +32,14 @@ pip install git+[https://github.com/Rudra-K/feed-forge.git](https://github.com/R
 Here's how easy it is to fetch articles from multiple RSS feeds at the same time.
 
 ```python
-
 import asyncio
 from feed_forge import Forge
 
 # A list of RSS feeds to fetch from.
 SOURCES = [
-    "[https://www.theverge.com/rss/index.xml](https://www.theverge.com/rss/index.xml)",
-    "[https://www.wired.com/feed/rss](https://www.wired.com/feed/rss)",
-    "[https://hnrss.org/frontpage](https://hnrss.org/frontpage)"
+    "https://www.theverge.com/rss/index.xml",
+    "https://www.wired.com/feed/rss",
+    "https://hnrss.org/frontpage"
 ]
 
 async def main():
@@ -69,7 +68,6 @@ if __name__ == "__main__":
 First, fetch a list of items from your desired sources.
 
 ```python
-
 import asyncio
 from feed_forge import Forge
 
@@ -117,7 +115,7 @@ for article in dated_items[:5]:
 
 ## The `FeedItem` Object
 
-The primary output of `Feed-Forge` is a list of `FeedItem` objects. This object provides a standardized interface to the data, regardless of the original source.
+The primary output of `feedunify` is a list of `FeedItem` objects. This object provides a standardized interface to the data, regardless of the original source.
 
 ### Key Attributes
 
@@ -135,7 +133,7 @@ The primary output of `Feed-Forge` is a list of `FeedItem` objects. This object 
 
 ## Future Plans
 
-`Feed-Forge` is actively being developed. Future goals include:
+`feedunify` is actively being developed. Future goals include:
 
 * [ ] Adding a connector for common JSON APIs.
 * [ ] Implementing intelligent HTTP caching (ETags, Last-Modified).
