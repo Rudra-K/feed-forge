@@ -9,8 +9,21 @@ class BaseConnector(abc.ABC):
     def __init__(self, source_url: str, config: Optional[Dict[str, Any]] = None):
         self.source_url = source_url
         self.config = config or {}
-        self.http_client = httpx.AsyncClient(follow_redirects=True)
 
+        # Added this to avoid connection_timeout errors.
+        headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            )
+        }
+        
+        self.http_client = httpx.AsyncClient(
+            headers=headers,
+            follow_redirects=True,
+            timeout=30.0
+        )
 
     async def fetch(self) -> List[FeedItem]:
         try:
