@@ -1,6 +1,6 @@
 import pytest
-from feed_forge.connectors.youtube import YouTubeConnector
-from feed_forge.models import FeedItem
+from feedunify.connectors.youtube import YouTubeConnector
+from feedunify.models import FeedItem
 
 TEST_CHANNEL_URL = "https://www.youtube.com/@theRadBrad"
 

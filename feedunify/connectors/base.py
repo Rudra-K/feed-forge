@@ -2,7 +2,7 @@ import abc
 from typing import List, Optional, Dict, Any
 import httpx
 
-from feed_forge.models import FeedItem
+from feedunify.models import FeedItem
 
 #base blueprint of all data source connectors
 class BaseConnector(abc.ABC):

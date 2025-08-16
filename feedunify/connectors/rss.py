@@ -3,7 +3,7 @@ from typing import List
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from feed_forge.models import FeedItem, Author
+from feedunify.models import FeedItem, Author
 from .base import BaseConnector
 
 class RssConnector(BaseConnector):

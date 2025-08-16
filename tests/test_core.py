@@ -1,6 +1,6 @@
 import pytest
-from feed_forge.core import Forge
-from feed_forge.models import FeedItem
+from feedunify.core import Forge
+from feedunify.models import FeedItem
 
 VALID_SOURCE_1 = "https://www.theverge.com/rss/index.xml"
 VALID_SOURCE_2 = "https://www.wired.com/feed/rss"

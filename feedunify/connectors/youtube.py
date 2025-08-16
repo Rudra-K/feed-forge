@@ -1,7 +1,7 @@
 import re
 from typing import List
 
-from feed_forge.models import FeedItem
+from feedunify.models import FeedItem
 from .rss import RssConnector
 
 CHANNEL_ID_REGEX = re.compile(r'(?:channelId":"|content=")(UC[a-zA-Z0-9_-]{22})')

@@ -1,6 +1,6 @@
 import pytest
-from feed_forge.connectors.rss import RssConnector
-from feed_forge.models import FeedItem
+from feedunify.connectors.rss import RssConnector
+from feedunify.models import FeedItem
 
 TEST_FEED_URL = "https://www.theverge.com/rss/index.xml"
 

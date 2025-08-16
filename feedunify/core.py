@@ -15,13 +15,14 @@ class Forge:
             },
             {
                 'name': 'rss',
-                'detector': lambda url: url.endswith('.xml') or 'rss in url',
+                'detector': lambda url: url.endswith(('.xml', '.rss')) or '/rss/' in url or '/feed/' in url,
                 'class': RssConnector,
             }
             #add more connectors here
         ]
     
     def _find_connector_for_url(self, url: str) -> Optional[Callable]:
+        """Finds the appropriate connector class for a given URL."""
         for connector_info in self._connectors:
             if connector_info['detector'](url):
                 return connector_info['class']
