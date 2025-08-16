@@ -18,7 +18,11 @@ Developers often need to pull data from various inconsistent sources like RSS fe
 * **Type-Safe & Robust:** Leverages `pydantic` for powerful data validation and parsing, preventing errors from malformed data.
 
 ---
+### v0.2.0 (Latest)
+* Added a smart `YouTubeConnector` that can find a channel's video feed from a standard channel URL.
+* Increased the default network timeout to 30 seconds for better reliability.
 
+---
 ## Installation
 
 you can install the library with:
