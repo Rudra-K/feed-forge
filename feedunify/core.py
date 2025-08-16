@@ -15,7 +15,7 @@ class Forge:
             },
             {
                 'name': 'rss',
-                'detector': lambda url: url.endswith(('.xml', '.rss')) or '/rss/' in url or '/feed/' in url,
+                'detector': lambda url: url.endswith(('.xml', '.rss')) or 'rss' in url or '/feed/' in url,
                 'class': RssConnector,
             }
             #add more connectors here
