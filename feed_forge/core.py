@@ -9,7 +9,7 @@ class Forge:
         self._connectors = [
             {
                 'name': 'rss',
-                'detector': lambda url: url.endswith(('.xml', '/rss')),
+                'detector': lambda url: url.endswith(('.xml', '/rss')) or 'youtube.com/feeds/' in url,
                 'class': RssConnector,
             }
             #add more connectors here
