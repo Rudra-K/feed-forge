@@ -1,6 +1,6 @@
 [project]
 name = "feedunify"
-version = "0.3.1"
+version = "0.3.2"
 description = "A high-performance, unifying library for data ingestion pipelines from multiple sources."
 authors = [
     { name = "Rudra Kawade", email = "rudrakawade2004@gmail.com" },

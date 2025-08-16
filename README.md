@@ -18,7 +18,10 @@ Developers often need to pull data from various inconsistent sources like RSS fe
 * **Type-Safe & Robust:** Leverages `pydantic` for powerful data validation and parsing, preventing errors from malformed data.
 
 ---
-### v0.3.0 (Latest)
+### v0.3.2 (Latest)
+* **Fix:** Corrected the RSS source detector again to properly handle URLs like `hnrss.org`.
+
+### v0.3.1
 * **BREAKING CHANGE:** Renamed the package to `feedunify` for consistency. The import is now `from feedunify import ...`.
 * **Fix:** Improved the RSS source detector to be more specific and avoid false positives.
 
