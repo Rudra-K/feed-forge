@@ -1,6 +1,7 @@
 import asyncio
 from typing import List, Callable, Optional
 
+from .connectors.youtube import YouTubeConnector
 from .connectors.rss import RssConnector
 from .models import FeedItem
 
@@ -8,8 +9,13 @@ class Forge:
     def __init__(self):
         self._connectors = [
             {
+                'name': 'youtube',
+                'detector': lambda url: 'youtube.com/' in url,
+                'class': YouTubeConnector,
+            },
+            {
                 'name': 'rss',
-                'detector': lambda url: url.endswith(('.xml', '/rss')) or 'youtube.com/feeds/' in url,
+                'detector': lambda url: url.endswith(('.xml', '/rss')),
                 'class': RssConnector,
             }
             #add more connectors here
