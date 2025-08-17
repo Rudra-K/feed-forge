@@ -18,21 +18,6 @@ Developers often need to pull data from various inconsistent sources like RSS fe
 * **Type-Safe & Robust:** Leverages `pydantic` for powerful data validation and parsing, preventing errors from malformed data.
 
 ---
-### v0.3.3 (Latest)
-* **Docs:** Added comprehensive docstrings to all classes and methods.
-
-### v0.3.2
-* **Fix:** Corrected the RSS source detector again to properly handle URLs like `hnrss.org`.
-
-### v0.3.1
-* **BREAKING CHANGE:** Renamed the package to `feedunify` for consistency. The import is now `from feedunify import ...`.
-* **Fix:** Improved the RSS source detector to be more specific and avoid false positives.
-
-### v0.2.0
-* Added a smart `YouTubeConnector` that can find a channel's video feed from a standard channel URL.
-* Increased the default network timeout to 30 seconds for better reliability.
-
----
 ## Installation
 
 you can install the library with:
@@ -41,6 +26,9 @@ you can install the library with:
 pip install feedunify
 ```
 ---
+## Changelog
+
+See the [CHANGELOG.md] file for a detailed history of changes to the project.
 
 ## Quickstart
 
