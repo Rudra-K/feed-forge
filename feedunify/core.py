@@ -6,6 +6,11 @@ from .connectors.rss import RssConnector
 from .models import FeedItem
 
 class Forge:
+    """
+    The main entry point for using the feedunify library.
+
+    Dispatches URLs to the appropriate connector based on a set of detection rules.
+    """
     def __init__(self):
         self._connectors = [
             {
@@ -15,14 +20,27 @@ class Forge:
             },
             {
                 'name': 'rss',
-                'detector': lambda url: url.endswith(('.xml', '.rss')) or 'rss' in url or '/feed/' in url,
+                'detector': lambda url: (
+                    url.endswith(('.xml', '.rss', '.atom')) or 
+                    'rss' in url or 
+                    '/feed/' in url or 
+                    '/atom/' in url
+                ),
                 'class': RssConnector,
             }
             #add more connectors here
         ]
     
     def _find_connector_for_url(self, url: str) -> Optional[Callable]:
-        """Finds the appropriate connector class for a given URL."""
+        """
+        Finds the appropriate connector class for a given URL.
+
+        Args:
+            url: The URL of the data source.
+
+        Returns:
+            The connector class if a match is found, otherwise None.
+        """
         for connector_info in self._connectors:
             if connector_info['detector'](url):
                 return connector_info['class']
@@ -30,6 +48,15 @@ class Forge:
         
 
     async def fetch_all(self, sources: List[str]) -> List[FeedItem]:
+        """
+        Fetches and parses items from a list of source URLs concurrently.
+
+        Args:
+            sources: A list of URLs.
+
+        Returns:
+            A single list of FeedItem objects from all successful sources.
+        """
         tasks = []
         for url in sources:
             connector_class = self._find_connector_for_url(url)
@@ -41,6 +68,7 @@ class Forge:
             else:
                 print(f"Warning: No suitable connector found for URL: {url}")
 
+        # Gathers and run all scheduled tasks concurrently.
         results_from_all_sources = await asyncio.gather(*tasks, return_exceptions=True)
 
         all_items = []

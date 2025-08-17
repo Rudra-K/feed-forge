@@ -25,5 +25,4 @@ async def test_youtube_connector_finds_feed_and_parses():
     assert first_item.title is not None
     assert "theRadBrad" in first_item.authors[0].name
 
-    # CLEANUP
     await connector.close()

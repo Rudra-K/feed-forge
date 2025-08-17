@@ -18,7 +18,10 @@ Developers often need to pull data from various inconsistent sources like RSS fe
 * **Type-Safe & Robust:** Leverages `pydantic` for powerful data validation and parsing, preventing errors from malformed data.
 
 ---
-### v0.3.2 (Latest)
+### v0.3.3 (Latest)
+* **Docs:** Added comprehensive docstrings to all classes and methods.
+
+### v0.3.2
 * **Fix:** Corrected the RSS source detector again to properly handle URLs like `hnrss.org`.
 
 ### v0.3.1
